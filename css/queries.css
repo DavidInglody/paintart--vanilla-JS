@@ -1,0 +1,105 @@
+@media only screen and (max-width:1120px) {
+    .three_cols .span-1-of-3{
+        width: 100%;
+        margin-left: 0px;
+    }
+    .slide-left h2 {
+        font-size: 30px;
+        margin-top: -140px;
+    }
+}
+
+@media only screen and (max-width:980px) {
+
+    nav ul li {
+        display: block;
+    }
+
+    .nav-background {
+        /* display: none; */
+    }
+
+    .mobile-nav-back {
+        height: 160px;
+        position: fixed;
+        width: 100%;
+        background-color: rgba(0,0,0,0.7);
+        border-bottom:2px solid #ff009d;
+        z-index: 50;
+        display:none;
+    }
+    .mobile-nav-icon {
+        display:inline-block;
+        z-index: 200;
+        position: fixed;
+        right: 2%;
+    }
+    nav ul {
+        display: none;
+    }
+}
+
+
+@media only screen and (max-width:860px) {
+    .slide-left>div {
+            display: none;
+    }
+    .slide-right {
+        position: absolute;
+        width: 100%;
+        left: 0%;
+        animation-name: fade;
+        animation-duration: 2s;
+    }
+    @keyframes fade {
+  from {opacity: .5}
+  to {opacity: 1}
+}
+    .arrow-buttons .arrow {
+        position: static;
+        transform: rotate(180deg);
+    }
+    .arrow-buttons{
+        margin-top: 400px;
+    }
+    
+    .arrow-up img {
+        transform: translateY(80%);
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+}
+
+@media only screen and (max-width:750px) {
+    .photo-segment .col {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+    .photogallery ul li  {
+        width: 100%;
+        height: 495px;
+    }
+    .photogallery ul li a img {
+        opacity: 1;
+    }
+    .photogallery img:hover {
+        transform: scale(1);
+    }
+    .three_cols h3 {
+        text-align: center;
+    }
+    .druhy_odstavec img {
+        width: 45%;
+    }
+}
+
+@media only screen and (max-width:480px){
+    .box input[type="text"]:focus,
+    .box input[type="email"]:focus,
+    textarea:focus {
+        transition: 0.25s;
+        width: 300px;
+        border-color: #df006e;
+        background-color: black;
+    }
+}

@@ -1,0 +1,488 @@
+*, :after, :before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 0 solid #e5e7eb; */
+}
+
+body {
+    height: 100vh;
+    font-family: sans-serif;
+    /* background-color: rgb(226, 226, 226); */
+}
+
+main {
+    background-color: #ffffff;
+}
+
+
+/***********  Container**************/
+.container-slider {
+    position: relative;
+    width: 97,9vw;
+    height: 100vh;
+    overflow: hidden;
+}
+.container-slider p {
+    color:white
+}
+
+/*********** REUSABLE **************/
+.row {
+    max-width: 1140px;
+    margin:0 auto;
+}
+
+.empty-space {
+    height: 50px;
+}
+
+.heading-main h2 {
+    text-align: center;
+     /* margin-top: 10px; */
+    font-size: 30px;
+    color: #df006e;
+    text-transform: uppercase;
+    font-weight: 600;
+ }
+
+.heading-main h2:after {
+    content: "";
+    display: block;
+    width: 150px;
+    border-bottom: 2px solid rgb(207, 42, 186);
+    margin: 10px auto;
+ }
+
+
+/* font h1, h3 and p */
+
+h1 {
+    margin-right: 600px;
+    font-size: 35px;
+    margin-bottom: 10px;
+    color: #df006e;
+    margin-left: 10px;
+    padding-top: 20px;
+}
+
+h3 {
+    /* margin-right: 500px; */
+    font-size: 25px;
+    margin-bottom: 10px;
+    color: rgb(207, 42, 186);
+    margin-left: 10px;
+}
+
+p {
+    margin-left: 10px;
+    font-size: 18px;
+    font-weight: 300;
+    letter-spacing: .25px;
+    line-height: 28px;
+    color:#abb8c3;
+}
+/********* Hamburger Menu *********/
+.mobile-nav-icon {
+    float: right;
+    margin-top: 5px;
+    display: none;
+}
+
+
+/*************** Ľavá časť s farbou a textom *******************/
+.slide-left {
+    position: absolute;
+    width: 35%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    transition: transform .5s linear;
+}
+
+.slide-left>div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+}
+
+.slide-left h2 {
+    font-size: 40px;
+    margin-bottom: 10px;
+    margin-top: -40px;
+    margin-right: 10px;
+
+}
+
+.color-1-slide {
+    background-color: #16bb4d;
+}
+
+.color-1-slide h2 {
+    color: #020001
+}
+
+.color-2-slide {
+    background-color: #00eeff;
+    text-decoration-color: pink;
+}
+
+.color-2-slide h2 {
+    color: #ff009d
+}
+
+.color-3-slide {
+    background-color: #000;
+}
+
+.color-4-slide {
+    background: linear-gradient(#0b06ff, #fa1b17);
+}
+
+/* Pravá časť s obrázkami */
+.slide-right {
+    position: absolute;
+    width: 65%;
+    height: 100%;
+    top: 0;
+    left: 35%;
+    transition: transform .5s linear;
+}
+
+.slide-right>div {
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.image-1 {
+    background-image: url(../img/samuraj.jpg);
+}
+
+.image-2 {
+    background-image: url(../img/cierno.jpg);
+}
+
+.image-3 {
+    background-image: url(../img/svadba.jpg);
+}
+
+.image-4 {
+    background-image: url(../img/separ.jpg);
+}
+
+/* ikonky šipok*/
+
+.arrow-buttons .arrow {
+    position: absolute;
+    z-index: 40;
+    left: 35%;
+    top: 50%;
+}
+
+.arrow img {
+    width: 50px;
+}
+/*********** Down arrow *******************/
+.arrow-down img {
+    transform: translateX(-100%);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.arrow-down img:hover {
+    border: 1px solid #000;
+}
+/*********** Up arrow *******************/
+.arrow-up img {
+    transform: translateY(-100%);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.arrow-up img:hover {
+    border: 1px solid #000;
+}
+
+/*********** arrow total up scroll*******************/
+.top-page {
+    display: none;
+    background-color: #ff009d;
+    text-decoration: none;
+    position: fixed;
+    right: 20px;
+    bottom: 50px;
+    z-index: 200;
+    border-radius: 15%;
+}
+
+.top-page:hover {
+    background-color: #ff009d93;
+}
+
+.top-page img {
+    margin-left: 18px;
+    margin-top: 5px;
+    width: 18px;
+    height: 18px;
+
+}
+
+.top-page p {
+    margin-right: 10px;
+    font-size: 14px;
+    color: #fff;
+}
+/*********** Menu *******************/
+
+.nav-background {
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index:50;
+    border-bottom: 2px solid #ff009d;
+}
+
+nav ul li {
+    display: inline-block;
+ }
+
+nav ul li a {
+    color: #fff;
+    font-size: 25px;
+    text-decoration: none;
+    padding-right: 20px;
+    padding-top: 10px;
+}
+nav ul li a:link,
+nav ul li a:visited {
+    color:white;
+    font-size: 25px;
+    text-decoration: none;
+    /* border-bottom: 2px solid transparent; */
+}
+nav ul li a:hover,
+nav ul li a:active {
+    color: rgb(207, 42, 186);
+    /* border-bottom: 2px solid rgb(207, 42, 186); */
+    transition: color 0.5s;
+}
+
+nav ul {
+    position: fixed;
+    float:right;
+    margin-left: 30%;
+    margin-top: 10px;
+    z-index:100;
+}
+
+
+/************** OBSAH ŽIADOSTI ************/
+
+.text-predstava {
+    margin-bottom: 20px;
+}
+
+.text-predstava div {
+    color: rgb(207, 42, 186);
+    font-size: 25px;
+    width: 50px;
+    height: 50px;
+    border: 2px solid black;
+    text-align: center;
+    border-radius: 50%;
+    padding: 8px;
+    float: left;
+    margin-left: 5px
+}
+
+.text-predstava p {
+    margin-left: 60px;
+
+}
+
+/************* ČAKACIA DOBA ***************/
+
+.firstPic {
+    float:left;
+    margin-right: 20px;
+    border-radius: 15px;
+    box-shadow:7px 7px 7px black;
+    margin-left: 5px;
+}
+
+/************* štýly maľby ***************/
+
+.treti_odstavec {
+    margin-top: 50px;
+    background : linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url("../img/lebron.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.treti_odstavec p {
+    color: #fff;
+    text-align: center;
+}
+
+.treti_odstavec h2 {
+    color: #fff;
+}
+
+/**************Photogallery****************/
+.photogallery li {
+    /* list-style-type: none; */
+    background-color: #000;
+    overflow: hidden;
+    height: 600px;
+}
+
+.photogallery img {
+    width: 100%;
+    height: 600px;
+    opacity: 0.7;
+}
+
+.photogallery img:hover {
+    transition:transform
+    0.5s, opacity 0.5s;
+    transform: scale(1.05);
+    opacity: 1;
+}
+
+.stvrty_odstavec h2 {
+    color:#ff009d;
+    margin-top: 50px;
+}
+
+/*********** Footer **************/
+.footer-page {
+
+    /* Height of the footer */
+    background: #df006e;
+
+}
+
+.social {
+    text-align: center;
+    margin-top: 10px ;
+}
+
+.social a img {
+    height: 40px;
+    transform: scale(1);
+}
+.social a img:hover {
+    transform: scale(1.15);
+    transition: transform 0.5s;
+}
+.social a {
+    text-decoration: none;
+}
+.social p {
+    display: inline;
+    height: 10px;
+}
+.footer-text {
+    text-align: center;
+}
+
+/******** Formulár **********/
+
+.box {
+    padding: 40px;
+    margin: 20px auto;
+    text-align: center;
+    max-width: 700px;
+}
+
+.box .heading-main h2 {
+    color: #df006e;
+}
+
+.box input[type="text"],
+.box input[type="email"],
+textarea {
+    width: 80%;
+    border: 2px solid;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    padding: 15px 10px;
+    width: 300px;
+    color: #bbb;
+    border-radius: 24px;
+    outline: none;
+    font-family: arial;
+
+}
+
+.box input[type="text"]:focus,
+.box input[type="email"]:focus,
+textarea:focus {
+    transition: 0.25s;
+    width: 380px;
+    border-color: #df006e;
+    background-color: black;
+}
+
+.box input[type="submit"] {
+    background: none;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    border: 2px solid #df006e;
+    padding: 14px 40px;
+    width: 300px;
+    outline: none;
+    color: #000;
+    border-radius: 24px;
+    cursor: pointer;
+}
+
+.box input[type="submit"]:hover {
+    background: #000;
+    color: #fff;
+}
+
+/* Form result */
+.form-result {
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+}
+
+.success {
+    background-color: #03f80f;
+}
+
+.error {
+    background-color: #fa1b17;
+}
+
+
+
+/*********** ClearFix **************/
+.clearfix {
+    zoom: 1
+}
+
+.clearfix:after {
+    content: ".";
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
